@@ -1,0 +1,3 @@
+StartupEvents.registry("item", kubejs => {
+    kubejs.create("chromatic_compound")
+})

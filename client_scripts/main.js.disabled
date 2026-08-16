@@ -1,0 +1,9 @@
+ItemEvents.modifyTooltips(event => {
+    event.add("kubejs:chromatic_compound", [
+        "Chromatic Compound is bugged and does not show up in JEI, even though it is craftable!",
+        "Make this by mixing zinc and white dye in a heated basin.",
+        Text.gray("Aliases:"),
+        Text.gray("- Refined Radiance"),
+        Text.gray("- Shadow Steel"),
+    ])
+})
