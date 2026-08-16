@@ -1,0 +1,5 @@
+Chromatic Compound sprite from Create
+https://modrinth.com/mod/create
+
+Recipes directly taken and merged from Create: Oxidized
+https://modrinth.com/mod/create_oxidized
