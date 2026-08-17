@@ -1,0 +1,57 @@
+{
+  "type": "create:mechanical_crafting",
+  "pattern": [
+    "bbbbbbbbbbbbbbb",
+    "bdefffffffffedb",
+    "beigggggggggieb",
+    "bdgitgggggtigdb",
+    "bdgtitgggtitgdb",
+    "bdggtitttitggdb",
+    "bdgggtinitgggdb",
+    "blgggtnwntggglb",
+    "bdgggtinitgggdb",
+    "bdggtitttitggdb",
+    "bdgtitgggtitgdb",
+    "bdgitgggggtigdb",
+    "beigggggggggieb",
+    "bdefffffffffedb",
+    "bbbbbbbbbbbbbbb"
+  ],
+  "key": {
+    "b": {
+      "item": "create:brass_block"
+    },
+    "d": {
+      "item": "minecraft:dragon_breath"
+    },
+    "i": {
+      "item": "minecraft:diamond_block"
+    },
+    "e": {
+      "item": "minecraft:end_rod"
+    },
+    "g": {
+      "item": "minecraft:glass"
+    },
+    "t": {
+      "item": "create:train_casing"
+    },
+    "n": {
+      "item": "minecraft:netherite_block"
+    },
+    "w": {
+      "item": "minecraft:nether_star"
+    },
+    "l": {
+      "item": "minecraft:elytra"
+    },
+    "f": {
+      "item": "minecraft:feather"
+    }
+  },
+  "result": {
+    "item": "balancedflight:flight_anchor",
+    "count": 1
+  },
+  "acceptMirrored": true
+}
