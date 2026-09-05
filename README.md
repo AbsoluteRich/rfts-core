@@ -1,2 +1,2 @@
 # rfts-core
-Custom recipes and recipes for the Reach for the Skies line of servers
+Custom recipes and changes for the Reach for the Skies line of servers
