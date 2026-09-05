@@ -1,5 +1,6 @@
 Chromatic Compound sprite from Create
 https://modrinth.com/mod/create
 
-Recipes directly taken and merged from Create: Oxidized
+Recipes directly taken and merged from Create: Oxidized and Create: Ultimate Factory
 https://modrinth.com/mod/create_oxidized
+https://modrinth.com/mod/create-ultimate-factory
