@@ -150,4 +150,22 @@ ServerEvents.recipes(event => {
 
     // Full belts re-exchange
     event.shapeless("dndecor:belt_connector", "create:belt_connector")
+
+    // Music disc production
+    event.recipes.create.sequenced_assembly(
+        // Outputs:
+        [
+            CreateItem.of("etched:blank_music_disc")
+        ],
+        // Input:
+        "createdeco:industrial_iron_ingot",
+        // Sequence:
+        [
+            event.recipes.create.deploying("createdeco:industrial_iron_ingot", ["createdeco:industrial_iron_ingot", "minecraft:amethyst_shard",]),
+            event.recipes.create.deploying("createdeco:industrial_iron_ingot", ["createdeco:industrial_iron_ingot", "minecraft:emerald",]),
+            event.recipes.create.cutting("createdeco:industrial_iron_ingot", "createdeco:industrial_iron_ingot"),
+        ]
+    )
+        .transitionalItem("createdeco:industrial_iron_ingot")
+        .loops(3) // Set the number of loops
 })
