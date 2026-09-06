@@ -4,3 +4,6 @@ https://modrinth.com/mod/create
 Recipes directly taken and merged from Create: Oxidized and Create: Ultimate Factory
 https://modrinth.com/mod/create_oxidized
 https://modrinth.com/mod/create-ultimate-factory
+
+Custom item textures from malcolmriley's unused-textures
+https://github.com/malcolmriley/unused-textures
