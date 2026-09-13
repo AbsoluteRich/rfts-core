@@ -7,34 +7,34 @@ ServerEvents.recipes(event => {
     event.remove("mekanism:transmitter/universal_cable/atomic")
 
     // Fluid pipe rebalance - making it earlier
-    event.remove("mekanism:transmitter/mechanical_pipe/basic")
-    event.shaped(
-        Item.of("8x mekanism:basic_mechanical_pipe"),
-        [
-            "   ",
-            "GPG",
-            "   "
-        ],
-        {
-            G: "minecraft:glass",
-            P: "create:mechanical_pump"
-        }
-    )
+    // event.remove("mekanism:transmitter/mechanical_pipe/basic")
+    // event.shaped(
+    //     Item.of("8x mekanism:basic_mechanical_pipe"),
+    //     [
+    //         "   ",
+    //         "GPG",
+    //         "   "
+    //     ],
+    //     {
+    //         G: "minecraft:glass",
+    //         P: "create:mechanical_pump"
+    //     }
+    // )
 
     // Item pipe rebalance
-    event.remove("mekanism:transmitter/logistical_transporter/basic")
-    event.shaped(
-        Item.of("8x mekanism:basic_logistical_transporter"),
-        [
-            "   ",
-            "BGB",
-            "   "
-        ],
-        {
-            B: "create:brass_ingot",
-            G: "mekanism:basic_control_circuit"
-        }
-    )
+    // event.remove("mekanism:transmitter/logistical_transporter/basic")
+    // event.shaped(
+    //     Item.of("8x mekanism:basic_logistical_transporter"),
+    //     [
+    //         "   ",
+    //         "BGB",
+    //         "   "
+    //     ],
+    //     {
+    //         B: "create:brass_ingot",
+    //         G: "mekanism:basic_control_circuit"
+    //     }
+    // )
 
     // Funny wrench
     event.remove("mekanism:configurator")
@@ -44,4 +44,7 @@ ServerEvents.recipes(event => {
         "create:wrench",
         "mekanism:ingot_steel"
     )
+    
+    // Why is a piece of cardboard so strong
+    event.remove("mekanism:cardboard_box")
 })
