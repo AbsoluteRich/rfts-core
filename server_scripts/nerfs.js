@@ -56,7 +56,29 @@ ServerEvents.recipes(event => {
         }
     )
 
-    // Todo: Change Cobblegen Galore
+    // Severely nerf generator crafting
+    let previous = "stone"
+    let types = ["copper", "iron", "gold", "emerald", "diamond", "netherite"]
+
+    types.forEach((type) => {
+        event.remove(`cobblegengalore:crafting/block_gen_${type}`)
+        event.shaped(
+            `cobblegengalore:block_gen_${type}`,
+            [
+                "BBB",
+                "GPG",
+                "BBB"
+            ],
+            {
+                B: `minecraft:${type}_block`,
+                G: "minecraft:glass",
+                P: `cobblegengalore:block_gen_${previous}`
+            }
+        )
+        previous = type
+    });
+
+    // Todo: Change generator outputs
     // event.custom({
     //     type: "cobblegengalore:blockgen",
     //     result: {
