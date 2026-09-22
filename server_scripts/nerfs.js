@@ -62,6 +62,21 @@ ServerEvents.recipes(event => {
     let previous = "stone"
     let types = ["copper", "iron", "gold", "emerald", "diamond", "netherite"]
 
+    event.remove("cobblegengalore:crafting/block_gen_stone")
+    event.shaped(
+        "cobblegengalore:block_gen_stone",
+        [
+            "SSS",
+            "GWG",
+            "SSS"
+        ],
+        {
+            S: "minecraft:smooth_stone",
+            G: "minecraft:glass",
+            W: "infinitewaterblock:infinite_water"
+        }
+    )
+
     types.forEach((type) => {
         event.remove(`cobblegengalore:crafting/block_gen_${type}`)
         event.shaped(
@@ -80,22 +95,31 @@ ServerEvents.recipes(event => {
         previous = type
     });
 
-    // Todo: Change generator outputs
-    // event.custom({
-    //     type: "cobblegengalore:blockgen",
-    //     result: {
-    //         id: "minecraft:andesite",
-    //         count: 1
-    //     },
-    //     speed: 2,
-    //     left: {
-    //         Name: "minecraft:water"
-    //     },
-    //     right: {
-    //         Name: "minecraft:lava"
-    //     },
-    //     modifier: {
-    //         Name: "minecraft:andesite"
-    //     }
-    // })
+    // Absolutely annihilate generators
+    let removedBlockTypes = [
+        "diorite",
+        "basalt",
+        "netherrack",
+        "end_stone",
+        // "obsidian",
+        "granite",
+        // "cobbled_deepslate",
+        "create/ochrum",
+        "tuff",
+        "create/limestone",
+        // "cobblestone",
+        "blackstone",
+        "calcite",
+        "create/veridium",
+        "create/scoria",
+        "mud",
+        // "stone",
+        "andesite",
+        "create/crimsite",
+        "create/asurine"
+    ]
+
+    removedBlockTypes.forEach((toRemove) => {
+        event.remove(`cobblegengalore:blockgen/${toRemove}`)
+    })
 })
