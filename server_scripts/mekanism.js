@@ -47,4 +47,13 @@ ServerEvents.recipes(event => {
     
     // Why is a piece of cardboard so strong
     event.remove("mekanism:cardboard_box")
+
+    // Death to jetpacks (at least for this current server)
+    event.remove("mekanism:jetpack")
+
+    // All the teleporters (except for QIO, you'll never take that from me)
+    event.remove("mekanism:teleporter_frame")
+    event.remove("mekanism:teleporter")
+    event.remove("mekanism:portable_teleporter")
+    event.remove("mekanism:quantum_entangloporter")
 })

@@ -1,19 +1,21 @@
 ServerEvents.recipes(event => {
-    // Remove Rich Soil recipe using eggshells
-    event.remove("createfood:minecraft/crafting/rich_soil_from_crafting")
-    event.shaped(
-        "farmersdelight:organic_compost",
-        [
-            "DEE",
-            "SSE",
-            "EEE"
-        ],
-        {
-            D: "minecraft:dirt",
-            E: "createfood:eggshell",
-            S: "minecraft:bone_meal"
-        }
-    )
+    if (Platform.isLoaded("createfood")) {
+        // Remove Rich Soil recipe using eggshells
+        event.remove("createfood:minecraft/crafting/rich_soil_from_crafting")
+        event.shaped(
+            "farmersdelight:organic_compost",
+            [
+                "DEE",
+                "SSE",
+                "EEE"
+            ],
+            {
+                D: "minecraft:dirt",
+                E: "createfood:eggshell",
+                S: "minecraft:bone_meal"
+            }
+        )
+    }
 
     // Modify the recipe of the Handheld Saw to be consistent with the Drill
     event.remove("dndesires:crafting/handheld_saw")
