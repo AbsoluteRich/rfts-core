@@ -44,7 +44,7 @@ ServerEvents.recipes(event => {
         "create:wrench",
         "mekanism:ingot_steel"
     )
-    
+
     // Why is a piece of cardboard so strong
     event.remove("mekanism:cardboard_box")
 
@@ -56,4 +56,32 @@ ServerEvents.recipes(event => {
     event.remove("mekanism:teleporter")
     event.remove("mekanism:portable_teleporter")
     event.remove("mekanism:quantum_entangloporter")
+
+    // Long awaited polonium recipes
+    event.remove("mekanism:processing/uranium/reprocessing/from_plutonium")
+    event.remove("mekanism:processing/uranium/reprocessing/to_fuel")
+    event.remove("mekanism:processing/uranium/fissile_fuel")
+
+    event.recipes.create.mixing(
+        [
+            "mekanism:reprocessed_fissile_fragment",
+            "createnuclear:uranium_rod",
+            Fluid.of("mekanism:superheated_sodium", 2000)
+        ],
+        [
+            Fluid.of("mekanism:uranium_hexafluoride", 1000),
+            Fluid.of("mekanism:sodium", 2000)
+        ]
+    ).superheated()
+    event.custom({
+        "type": "mekanism:oxidizing",
+        "input": {
+            "count": 1,
+            "item": "mekanism:reprocessed_fissile_fragment"
+        },
+        "output": {
+            "amount": 10,
+            "id": "mekanism:nuclear_waste"
+        }
+    })
 })
